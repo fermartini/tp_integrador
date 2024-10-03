@@ -2,19 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_marginTop="6dp"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
         android:text="Comparador de Inversiones"
-        android:textSize="24sp" />
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"/>
 
 
     <com.google.android.material.card.MaterialCardView
@@ -32,56 +33,56 @@
                 android:id="@+id/layoutCapitalUno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="Capital Inversión 1">
+                android:hint="Capital Inversión 1"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutPlazoUno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="Plazo Inversión 1 (en días)">
+                android:hint="Plazo Inversión 1 (en días)"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutTnaUno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="TNA Inversión 1">
+                android:hint="TNA Inversión 1"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutEntidadUno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="Entidad Inversión 1">
+                android:hint="Entidad Inversión 1"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -90,7 +91,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"/>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -103,60 +104,61 @@
             android:padding="16dp">
 
 
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutCapitalDos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="Capital Inversión 2">
+                android:hint="Capital Inversión 2"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutPlazoDos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="Plazo Inversión 2 (en días)">
+                android:hint="Plazo Inversión 2 (en días)"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutTnaDos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="TNA Inversión 2">
+                android:hint="TNA Inversión 2"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutEntidadDos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="Entidad Inversión 2">
+                android:hint="Entidad Inversión 2"
+                android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -165,81 +167,8 @@
         android:id="@+id/botonRdo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Comparar"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:text="Comparar" />
-
-
-    <!--
-        <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="....." />
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Ingresa tu nombre"
-        android:inputType="textPersonName"
-        />
-
-    <EditText
-        android:id="@+id/apellido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Ingresa tu apellido"
-        android:inputType="textPersonName"
-        android:layout_marginTop="16dp" />
-
-    <EditText
-        android:id="@+id/correoElectronico"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Ingresa tu email"
-        android:inputType="text"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:id="@+id/botonIngresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Ingresar" />
-
-    <CheckBox
-        android:id="@+id/cbTyC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Aceptar términos y condiciones" />
-
-    <Button
-        android:id="@+id/botonTyC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Términos y Condiciones" />
-
-    <Button
-        android:id="@+id/botonHistorial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Historial" />
-
-                   -->
+        android:layout_marginTop="24dp"/>
 
 </LinearLayout>
