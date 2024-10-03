@@ -44,21 +44,43 @@ class ResultActivity : AppCompatActivity() {
             finish()
         }
 
-        val btnGuardarInversion = findViewById<Button>(R.id.btnGuardarInversion)
+                val btnGuardarInversion = findViewById<Button>(R.id.btnGuardarInversion)
         btnGuardarInversion.setOnClickListener {
-            /*
-            guardarInversion(
-                this,
-                entidadUno ?: "EntidadUno",
-                capitalUno,
-                tnaUno,
-                plazoUno,
-                entidadDos ?: "EntidadDos",
-                capitalDos,
-                tnaDos,
-                plazoDos
-            )
-            */
+                guardarComparacion(entidadUno, capitalUno, tnaUno, plazoUno, roiUno, entidadDos,
+                    capitalDos, tnaDos, plazoDos, roiDos)
+            }
         }
     }
+}
+
+fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, plazoUno: Int, roiUno: Double,
+                   entidadDos: String?, capitalDos: Double, tnaDos: Double, plazoDos: Int, roiDos: Double) {
+    val sharedPreferences = getSharedPreferences("HistorialComparaciones", MODE_PRIVATE)
+    val archivadorDatos = sharedPreferences.edit()
+
+    for (i in 5 downTo 1) {
+        archivadorDatos.putFloat("capitalInvUno$i", sharedPreferences.getFloat("capitalInvUno${i - 1}", 0f))
+        archivadorDatos.putFloat("tnaInvUno$i", sharedPreferences.getFloat("tnaInvUno${i - 1}", 0f))
+        archivadorDatos.putInt("plazoInvUno$i", sharedPreferences.getInt("plazoInvUno${i - 1}", 0))
+        archivadorDatos.putFloat("roiInvUno$i", sharedPreferences.getFloat("roiInvUno${i - 1}", 0f))
+
+        archivadorDatos.putFloat("capitalInv2$i", sharedPreferences.getFloat("capitalInvDos${i - 1}", 0f))
+        archivadorDatos.putFloat("tnaInvDos$i", sharedPreferences.getFloat("tnaInvDos${i - 1}", 0f))
+        archivadorDatos.putInt("plazoInvDos$i", sharedPreferences.getInt("plazoInvDos${i - 1}", 0))
+        archivadorDatos.putFloat("roiInvDos$i", sharedPreferences.getFloat("roiInvDos${i - 1}", 0f))
+    }
+
+    editor.putFloat("capitalInvUno", capitalUno.toFloat())
+    editor.putFloat("tnaInvUno", tnaUno.toFloat())
+    editor.putInt("plazoInvUno", plazoUno)
+    editor.putFloat("roiInvUno", roiUno.toFloat())
+
+    editor.putFloat("capitalInvDos", capitalDos.toFloat())
+    editor.putFloat("tnaInvDos", tnaDos.toFloat())
+    editor.putInt("plazoInvDos", plazoDos)
+    editor.putFloat("roiInvDos", roiDos.toFloat())
+
+    editor.apply()
+
+    Toast.makeText(this, "Comparación guardada exitosamente", Toast.LENGTH_SHORT).show()
 }
