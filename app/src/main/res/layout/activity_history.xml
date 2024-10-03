@@ -5,6 +5,58 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistoryActivity">
+    tools:context=".HistoryActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historico de comparaciones"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/comparacion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparación 1"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/comparacion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparación 2"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/comparacion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparación 3"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/comparacion4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparación 4"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/comparacion5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparación 5"
+        android:paddingTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Atrás"/>
+</LinearLayout>
