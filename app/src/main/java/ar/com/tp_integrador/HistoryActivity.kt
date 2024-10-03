@@ -25,7 +25,7 @@ class HistoryActivity : AppCompatActivity() {
         val comparacion4 = findViewById<TextView>(R.id.comparacion4)
         val comparacion5 = findViewById<TextView>(R.id.comparacion5)
 
-        val historico = mostrarHistorial()
+        val historial = mostrarHistorial()
 
         comparacion1.text = historial[0]
         comparacion2.text = historial[1]
