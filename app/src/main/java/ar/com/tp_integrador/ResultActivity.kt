@@ -70,17 +70,17 @@ fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, 
         archivadorDatos.putFloat("roiInvDos$i", sharedPreferences.getFloat("roiInvDos${i - 1}", 0f))
     }
 
-    editor.putFloat("capitalInvUno", capitalUno.toFloat())
-    editor.putFloat("tnaInvUno", tnaUno.toFloat())
-    editor.putInt("plazoInvUno", plazoUno)
-    editor.putFloat("roiInvUno", roiUno.toFloat())
+    archivadorDatos.putFloat("capitalInvUno", capitalUno.toFloat())
+    archivadorDatos.putFloat("tnaInvUno", tnaUno.toFloat())
+    archivadorDatos.putInt("plazoInvUno", plazoUno)
+    archivadorDatos.putFloat("roiInvUno", roiUno.toFloat())
 
-    editor.putFloat("capitalInvDos", capitalDos.toFloat())
-    editor.putFloat("tnaInvDos", tnaDos.toFloat())
-    editor.putInt("plazoInvDos", plazoDos)
-    editor.putFloat("roiInvDos", roiDos.toFloat())
+    archivadorDatos.putFloat("capitalInvDos", capitalDos.toFloat())
+    archivadorDatos.putFloat("tnaInvDos", tnaDos.toFloat())
+    archivadorDatos.putInt("plazoInvDos", plazoDos)
+    archivadorDatos.putFloat("roiInvDos", roiDos.toFloat())
 
-    editor.apply()
+    archivadorDatos.apply()
 
     Toast.makeText(this, "Comparación guardada exitosamente", Toast.LENGTH_SHORT).show()
 }
