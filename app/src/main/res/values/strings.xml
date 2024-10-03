@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">tp_integrador</string>
+    <string name="datos">Ingrese sus datos</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="correoElectronico">Correo Electrónico</string>
+    <string name="botonIngreso">Ingresar</string>
+    <string name="tyc">Tomo conocimiento y acepto que la presente aplicación solamente ofrece servicios de consulta online sobre financiación y/o inversión y no realiza préstamos, emite tarjetas y/o hace inversiones de ningún tipo. Asimismo, advierto conocer que el operador de esta web no es prestamista, agente, gestor, representante o corredor de financiera alguna, y no cobra a sus usuarios por ningún producto o servicio financiero. Los datos cargados no constituyen ningún tipo de oferta y/o solicitud de productos financieros por parte de la aplicación y corren bajo mi absoluta responsabilidad.</string>
+</resources>
