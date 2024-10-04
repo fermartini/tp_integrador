@@ -51,7 +51,6 @@ class ResultActivity : AppCompatActivity() {
             }
         }
     }
-}
 
 fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, plazoUno: Int, roiUno: Double,
                    entidadDos: String?, capitalDos: Double, tnaDos: Double, plazoDos: Int, roiDos: Double) {
