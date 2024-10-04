@@ -39,7 +39,7 @@
                         android:id="@+id/tv_inversion_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Inversión 1"
+                        android:text="@string/inversionResultado1"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -49,7 +49,7 @@
                         android:id="@+id/roi_inversion_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ROI 1: 0%"
+                        android:text="@string/roi1"
                         android:textSize="16sp"
                         android:gravity="center" />
 
@@ -66,7 +66,7 @@
                         android:id="@+id/tv_inversion_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Inversión 2"
+                        android:text="@string/inversionResultado2"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -76,7 +76,7 @@
                         android:id="@+id/roi_inversion_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ROI 2: 0%"
+                        android:text="@string/roi2"
                         android:textSize="16sp"
                         android:gravity="center" />
 
@@ -88,7 +88,7 @@
                 android:id="@+id/resultado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="El resultado aparecerá aquí"
+                android:text="@string/resultadoComparacion"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
@@ -103,7 +103,7 @@
         android:id="@+id/btnGuardarInversion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guardar Inversión"
+        android:text="@string/botonGuardar"
         app:cornerRadius="16dp"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="32dp"/>
@@ -112,7 +112,7 @@
         android:id="@+id/btnVolverAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Volver Atrás"
+        android:text="@string/botonVolver"
         app:cornerRadius="16dp"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="32dp"/>

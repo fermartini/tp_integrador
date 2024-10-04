@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:text="Comparador de Inversiones"
+        android:text="@string/comparador"
         android:textSize="24sp" />
 
 
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Capital Inversión 1">
+                android:hint="@string/capital1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalUno"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Plazo Inversión 1 (en días)">
+                android:hint="@string/plazoInversion1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoUno"
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="TNA Inversión 1">
+                android:hint="@string/tna1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaUno"
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Entidad Inversión 1">
+                android:hint="@string/entidad1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadUno"
@@ -108,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Capital Inversión 2">
+                android:hint="@string/capital2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalDos"
@@ -122,7 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Plazo Inversión 2 (en días)">
+                android:hint="@string/plazoInversion2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoDos"
@@ -136,7 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="TNA Inversión 2">
+                android:hint="@string/tna2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaDos"
@@ -150,7 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Entidad Inversión 2">
+                android:hint="@string/entidad2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadDos"
@@ -167,7 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
-        android:text="Comparar" />
+        android:text="@string/botonComparar" />
 
 
     <!--

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
-        android:text="Hola"
+        android:text="@string/bienvenida"
         android:textSize="24sp" />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
-        android:text="Tipo de Inversor:"
+        android:text="@string/tipoInversor"
         android:textSize="18sp" />
 
     <LinearLayout
@@ -45,7 +45,7 @@
             android:padding="12dp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="#b48ac1"
-            android:text="Simular"
+            android:text="@string/botonSimular"
             android:textColor="#511656" />
 
         <Button
@@ -55,7 +55,7 @@
             android:layout_weight="1"
             android:padding="12dp"
             android:backgroundTint="#b48ac1"
-            android:text="Desconectar"
+            android:text="@string/botonDesconectar"
             android:textColor="#e7180b" />
     </LinearLayout>
 
@@ -75,7 +75,7 @@
             android:id="@+id/btnHistorial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ver Historial"
+            android:text="@string/botonHistorial"
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#b48ac1"

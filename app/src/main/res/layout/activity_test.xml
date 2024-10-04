@@ -13,14 +13,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test del Inversor"
+        android:text="@string/tituloTest"
         android:textSize="20sp"
         android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Qué experiencia tenés como inversionista?"
+        android:text="@string/pregunta1Test"
         android:textSize="16sp"/>
     <RadioGroup
         android:id="@+id/answer1"
@@ -30,7 +30,7 @@
             android:id="@+id/answer1Option1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="A- Baja."
+            android:text="@string/opcion1preg1"
             android:tag="1"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -39,7 +39,7 @@
             android:id="@+id/answer1Option2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="B- Media."
+            android:text="@string/opcion2preg1"
             android:tag="2"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -48,7 +48,7 @@
             android:id="@+id/answer1Option3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C- Alta."
+            android:text="@string/opcion3preg1"
             android:tag="3"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -58,7 +58,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Qué porcentaje de tus ahorros estás dispuesto a destinar a las inversiones en el Mercado de Capitales?"
+        android:text="@string/pregunta2Test"
         android:textSize="16sp"/>
     <RadioGroup
         android:id="@+id/answer2"
@@ -68,7 +68,7 @@
             android:id="@+id/answer2Option1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="A- Menos del 25%."
+            android:text="@string/opcion1preg2"
             android:tag="1"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -77,7 +77,7 @@
             android:id="@+id/answer2Option2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="B- Entre el 25% y el 50%."
+            android:text="@string/opcion2preg2"
             android:tag="2"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -86,7 +86,7 @@
             android:id="@+id/answer2Option3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C- Más del 50%."
+            android:text="@string/opcion3preg2"
             android:tag="3"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -96,7 +96,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Cuánto tiempo conservarías esta inversión?"
+        android:text="@string/pregunta3Test"
         android:textSize="16sp"/>
     <RadioGroup
         android:id="@+id/answer3"
@@ -106,7 +106,7 @@
             android:id="@+id/answer3Option1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="A- Menos de 180 días."
+            android:text="@string/opcion1preg3"
             android:tag="1"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -115,7 +115,7 @@
             android:id="@+id/answer3Option2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="B- Entre 180 días y 2 años."
+            android:text="@string/opcion2preg3"
             android:tag="2"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -124,7 +124,7 @@
             android:id="@+id/answer3Option3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C- Más de 2 años."
+            android:text="@string/opcion3preg3"
             android:tag="3"
             android:padding="8dp"
             android:minWidth="48dp"
@@ -135,6 +135,6 @@
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enviar"/>
+        android:text="@string/botonEnviar"/>
 
 </LinearLayout>
