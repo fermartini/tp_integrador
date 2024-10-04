@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         botonTyC.setOnClickListener {
                 val dialog = TyCActivity()
                 dialog.show(supportFragmentManager, "tyc")
-                botonTyC.visibility = View.INVISIBLE
+                botonTyC.visibility = View.GONE
                 botonIngresar.visibility = View.VISIBLE
             }
 
