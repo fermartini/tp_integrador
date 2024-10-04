@@ -67,13 +67,12 @@ class HistoryActivity : AppCompatActivity() {
             val roiDos = sharedPreferences.getFloat("roiInvDos$i", 0f)
 
             if (capitalUno != 0f && capitalDos != 0f) {
-                historial[i] = """La opción de inversión 1 en la entidad $entidadUno se ingresó por un capital de $capitalUno
-                con una TNA de $tasaUno% en un plazo de $plazoUno días y con un ROI resultante de $roiUno%.
-                Mientras que la opción 2 en la entidad $entidadDos se ingresó por un capital de $capitalDos con una TNA de
-                $tasaDos% en un plazo de $plazoDos días y con un ROI resultante de $roiDos%""".trimIndent()
+                historial[i] = """INVERSIÓN 1 - Entidad: $entidadUno Capital: $capitalUno TNA: $tasaUno% Plazo: $plazoUno días ROI: $roiUno%.
+INVERSIÓN 2 - Entidad: $entidadDos Capital: $capitalDos TNA: $tasaDos% Plazo $plazoDos días ROI: $roiDos%""".trimIndent()
             }
         }
 
         return historial
     }
 }
+
