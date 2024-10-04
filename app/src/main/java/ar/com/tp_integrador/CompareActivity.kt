@@ -16,6 +16,7 @@ class CompareActivity : AppCompatActivity() {
 
         enableEdgeToEdge()
         setContentView(R.layout.activity_compare)
+        
         val botonResultado = findViewById<Button>(R.id.botonRdo)
 
         botonResultado.setOnClickListener {
@@ -52,6 +53,11 @@ class CompareActivity : AppCompatActivity() {
             intent.putExtra("capitalDos", capitalDos)
             intent.putExtra("tnaDos", tasaDos)
             intent.putExtra("plazoDos", plazoDos)
+            startActivity(intent)
+        }
+        val botonVolverAtras= findViewById<Button>(R.id.btnVolverAtras)
+        botonVolverAtras.setOnClickListener {
+            val intent = Intent(this, ButtonsActivity::class.java)
             startActivity(intent)
         }
     }
