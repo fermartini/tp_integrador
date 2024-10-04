@@ -1,69 +1,90 @@
 package ar.com.tp_integrador
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import android.content.Context
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.Toast
+import android.content.Context
 
-class HistoryActivity : AppCompatActivity() {
+class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_history)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_result)
+        val roiUno = intent.getDoubleExtra("roiUno", 0.0)
+        val roiDos = intent.getDoubleExtra("roiDos", 0.0)
+        val comparacion = intent.getStringExtra("comparacion")
 
-        val comparacion1 = findViewById<TextView>(R.id.comparacion1)
-        val comparacion2 = findViewById<TextView>(R.id.comparacion2)
-        val comparacion3 = findViewById<TextView>(R.id.comparacion3)
-        val comparacion4 = findViewById<TextView>(R.id.comparacion4)
-        val comparacion5 = findViewById<TextView>(R.id.comparacion5)
 
-        val historial = mostrarHistorial()
+        val resultadoTextView = findViewById<TextView>(R.id.resultado)
+        resultadoTextView.text = """ $comparacion """.trimIndent()
 
-        comparacion1.text = historial[0]
-        comparacion2.text = historial[1]
-        comparacion3.text = historial[2]
-        comparacion4.text = historial[3]
-        comparacion5.text = historial[4]
+        val roiUnoTextView = findViewById<TextView>(R.id.roi_inversion_1)
+        roiUnoTextView.text = "ROI: $roiUno"
 
-        val btnAtras = findViewById<Button>(R.id.btnAtras)
-        btnAtras.setOnClickListener {
+        val roiDosTextView = findViewById<TextView>(R.id.roi_inversion_2)
+        roiDosTextView.text = "ROI: $roiDos"
+
+        val entidadUno = intent.getStringExtra("entidadUno")
+        val capitalUno = intent.getDoubleExtra("capitalUno", 0.0)
+        val tnaUno = intent.getDoubleExtra("tnaUno", 0.0)
+        val plazoUno = intent.getIntExtra("plazoUno", 0)
+
+        val entidadDos = intent.getStringExtra("entidadDos")
+        val capitalDos = intent.getDoubleExtra("capitalDos", 0.0)
+        val tnaDos = intent.getDoubleExtra("tnaDos", 0.0)
+        val plazoDos = intent.getIntExtra("plazoDos", 0)
+
+        val btnVolverAtras = findViewById<Button>(R.id.btnVolverAtras)
+        btnVolverAtras.setOnClickListener {
             finish()
         }
-    }
 
-    fun mostrarHistorial(): Array<String> {
-        val sharedPreferences = getSharedPreferences("HistorialComparaciones", Context.MODE_PRIVATE)
-
-        val historial = Array(5) { "" }
-
-        for (i in 0..4) {
-            val capitalUno = sharedPreferences.getFloat("capitalInv1$i", 0f)
-            val tasaUno = sharedPreferences.getFloat("tnaInvUno$i", 0f)
-            val plazoUno = sharedPreferences.getInt("plazoInvUno$i", 0)
-
-            val capitalDos = sharedPreferences.getFloat("capitalInv2$i", 0f)
-            val tasaDos = sharedPreferences.getFloat("tnaInvDos$i", 0f)
-            val plazoDos = sharedPreferences.getInt("plazoInvDos$i", 0)
-
-            val roiUno = sharedPreferences.getFloat("roiInvUno$i", 0f)
-            val roiDos = sharedPreferences.getFloat("roiInvDos$i", 0f)
-
-            if (capitalUno != 0f && capitalDos != 0f) {
-                historial[i] = """La opción de inversión 1 se ingresó por un capital de $capitalUno
-                con una TNA de $tasaUno% en un plazo de $plazoUno días y con un ROI resultante de $roiUno%.
-                Mientras que la opción 2 se ingresó por un capital de $capitalDos con una TNA de
-                $tasaDos% en un plazo de $plazoDos días y con un ROI resultante de $roiDos%""".trimIndent()
+                val btnGuardarInversion = findViewById<Button>(R.id.btnGuardarInversion)
+        btnGuardarInversion.setOnClickListener {
+                guardarComparacion(entidadUno, capitalUno, tnaUno, plazoUno, roiUno, entidadDos,
+                    capitalDos, tnaDos, plazoDos, roiDos)
             }
         }
-
-        return historial
     }
 }
+
+fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, plazoUno: Int, roiUno: Double,
+                   entidadDos: String?, capitalDos: Double, tnaDos: Double, plazoDos: Int, roiDos: Double) {
+    val sharedPreferences = this.getSharedPreferences("HistorialComparaciones", MODE_PRIVATE)
+    val archivadorDatos = sharedPreferences.edit()
+
+    for (i in 5 downTo 1) {
+        archivadorDatos.putString("entidadInvUno$i", sharedPreferences.getString("entidadInvUno${i -1}",0f))
+        archivadorDatos.putFloat("capitalInvUno$i", sharedPreferences.getFloat("capitalInvUno${i - 1}", 0f))
+        archivadorDatos.putFloat("tnaInvUno$i", sharedPreferences.getFloat("tnaInvUno${i - 1}", 0f))
+        archivadorDatos.putInt("plazoInvUno$i", sharedPreferences.getInt("plazoInvUno${i - 1}", 0))
+        archivadorDatos.putFloat("roiInvUno$i", sharedPreferences.getFloat("roiInvUno${i - 1}", 0f))
+
+        archivadorDatos.putString("entidadInvDos$i", sharedPreferences.getString("entidadInvDos${i -1}",0f))
+        archivadorDatos.putFloat("capitalInv2$i", sharedPreferences.getFloat("capitalInvDos${i - 1}", 0f))
+        archivadorDatos.putFloat("tnaInvDos$i", sharedPreferences.getFloat("tnaInvDos${i - 1}", 0f))
+        archivadorDatos.putInt("plazoInvDos$i", sharedPreferences.getInt("plazoInvDos${i - 1}", 0))
+        archivadorDatos.putFloat("roiInvDos$i", sharedPreferences.getFloat("roiInvDos${i - 1}", 0f))
+    }
+
+    archivadorDatos.putString("entidadInvDos", entidadUno)
+    archivadorDatos.putFloat("capitalInvUno", capitalUno.toFloat())
+    archivadorDatos.putFloat("tnaInvUno", tnaUno.toFloat())
+    archivadorDatos.putInt("plazoInvUno", plazoUno)
+    archivadorDatos.putFloat("roiInvUno", roiUno.toFloat())
+
+    archivadorDatos.putString("entidadInvDos", entidadDos)
+    archivadorDatos.putFloat("capitalInvDos", capitalDos.toFloat())
+    archivadorDatos.putFloat("tnaInvDos", tnaDos.toFloat())
+    archivadorDatos.putInt("plazoInvDos", plazoDos)
+    archivadorDatos.putFloat("roiInvDos", roiDos.toFloat())
+
+    archivadorDatos.apply()
+
+    Toast.makeText(this, "Comparación guardada exitosamente", Toast.LENGTH_SHORT).show()
+}
+
+
