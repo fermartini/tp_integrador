@@ -23,6 +23,15 @@ class LoginActivity : AppCompatActivity() {
         val correoElectronico = findViewById<EditText>(R.id.correoElectronico)
         val progressBar = findViewById<ProgressBar>(R.id.progreso)
         val botonIngresar = findViewById<Button>(R.id.botonIngresar)
+        val botonTyC = findViewById<Button>(R.id.botonTyC)
+
+        // TODO ver cómo hacer para que devuelva un valor en el cual si bien active el botón ingresar, haya dado antes aceptar a las bases y condiciones
+        botonTyC.setOnClickListener {
+                val dialog = TyCActivity()
+                dialog.show(supportFragmentManager, "tyc")
+                botonTyC.visibility = View.INVISIBLE
+                botonIngresar.visibility = View.VISIBLE
+            }
 
         botonIngresar.setOnClickListener {
             progressBar.visibility = View.VISIBLE

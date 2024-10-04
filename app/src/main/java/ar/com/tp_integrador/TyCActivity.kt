@@ -1,20 +1,31 @@
 package ar.com.tp_integrador
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 
-class TyCActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_ty_cactivity)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+class TyCActivity : DialogFragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val rootView: View = inflater.inflate(R.layout.activity_ty_cactivity, container, false)
+        val aceptar = rootView.findViewById<Button>(R.id.botonAceptar)
+        val checked = rootView.findViewById<CheckBox>(R.id.checkedTyC)
+
+        aceptar.setOnClickListener {
+            if(checked.isChecked){
+                dismiss()
+            }   else {
+                Toast.makeText(context, "Debe aceptar los Términos y Condiciones para poder continuar", Toast.LENGTH_LONG).show()
+            }
         }
+        return rootView
     }
 }

@@ -63,7 +63,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="50dp"
+        android:visibility="gone"
         android:text="@string/botonIngreso"/>
+
+    <Button
+        android:id="@+id/botonTyC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:visibility="visible"
+        android:text="@string/botonTyC"/>
 
 
 </LinearLayout>
