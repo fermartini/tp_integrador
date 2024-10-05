@@ -16,6 +16,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
+
+        //Llamo a cada una las id de las variables
         val nombre = findViewById<EditText>(R.id.nombre)
         val apellido = findViewById<EditText>(R.id.apellido)
         val correoElectronico = findViewById<EditText>(R.id.correoElectronico)
@@ -23,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         val botonIngresar = findViewById<Button>(R.id.botonIngresar)
         val botonTyC = findViewById<Button>(R.id.botonTyC)
 
-        // TODO ver cómo hacer para que devuelva un valor en el cual si bien active el botón ingresar, haya dado antes aceptar a las bases y condiciones
+        //Botón que abre el pop up donde se encuentran las políticas de términos y condiciones
         botonTyC.setOnClickListener {
                 val dialog = TyCActivity()
                 dialog.show(supportFragmentManager, "tyc")
@@ -31,13 +33,16 @@ class LoginActivity : AppCompatActivity() {
                 botonIngresar.visibility = View.VISIBLE
             }
 
+        //Botón ingresar
         botonIngresar.setOnClickListener {
             progressBar.visibility = View.VISIBLE
             val nombreUsuario = nombre.text.toString()
             val apellidoUsuario = apellido.text.toString()
             val correoUsuario = correoElectronico.text.toString()
+            //Realizo el getSharedPreferences para que el resto de las activities accedan a los datos a los que les hago putString
             val datosPersonales = getSharedPreferences("userData", Context.MODE_PRIVATE)
 
+            //Valida que ninguno de los valores solicitados quede vacío
             if(nombreUsuario.isNotEmpty() && apellidoUsuario.isNotEmpty() && correoUsuario.isNotEmpty()){
                 datosPersonales.edit().apply {
                     putString("nombreUsuario", nombreUsuario)
@@ -46,12 +51,15 @@ class LoginActivity : AppCompatActivity() {
                     apply()
                 }
                 progressBar.visibility = View.GONE
+                //Mensaje de validación si se logueo correctamente
                 Toast.makeText(this, "Logueo Válido", Toast.LENGTH_LONG).show()
+                //Redirijo a la actividad del Test de Inversor
                 val intent = Intent(this, TestActivity::class.java )
                 startActivity(intent)
                 finish()
             }
             else{
+                //Mensaje que aparece para que el usuario complete la totalidad de los datos
                 Toast.makeText(this, "Debe completar todos los datos solicitados", Toast.LENGTH_LONG).show()
             }
         }
