@@ -20,7 +20,7 @@ class TyCActivity : DialogFragment() {
         val rootView: View = inflater.inflate(R.layout.activity_ty_cactivity, container, false)
         val aceptar = rootView.findViewById<Button>(R.id.botonAceptar)
         val checked = rootView.findViewById<CheckBox>(R.id.checkedTyC)
-        val cancelar = rootView.findViewById<Button>(R.id.botonCancelar)
+        val noAceptar = rootView.findViewById<Button>(R.id.botonNoAceptar)
 
         //Botón aceptar
         aceptar.setOnClickListener {
@@ -34,10 +34,10 @@ class TyCActivity : DialogFragment() {
             }
         }
 
-        //Botón cancelar
-        cancelar.setOnClickListener {
+        //Botón no acepta
+        noAceptar.setOnClickListener {
             //Mensaje que le avisa al usuario que al no aceptar las bases y condiciones se cerrará la app
-            Toast.makeText(context, "Al cancelar no aceptó los Términos y Condiciones. Se cierra la aplicación.", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Al no aceptar los Términos y Condiciones, se cierra la aplicación.", Toast.LENGTH_LONG).show()
             exitProcess(0)
         }
 

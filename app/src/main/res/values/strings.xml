@@ -39,7 +39,7 @@
     <string name="tyc">La presente aplicación solamente ofrece servicios de consulta online sobre financiación y/o inversión y no realiza préstamos, emite tarjetas y/o hace inversiones de ningún tipo. \nEl operador de esta web no es prestamista, agente, gestor, representante o corredor de financiera alguna, y no cobra a sus usuarios por ningún producto o servicio financiero. \nLos datos cargados no constituyen ningún tipo de oferta y/o solicitud de productos financieros por parte de la aplicación y corren bajo mi absoluta responsabilidad.</string>
     <string name="aceptacionTyC">He leído y acepto los términos y condiciones de uso</string>
     <string name="botonAceptar">Aceptar</string>
-    <string name="botonCancelar">Cancelar</string>
+    <string name="botonNoAceptar">No Aceptar</string>
     <string name="inversionResultado1">Inversión 1</string>
     <string name="inversionResultado2">Inversión 2</string>
     <string name="roi1">ROI 1: 0%</string>

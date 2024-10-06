@@ -47,13 +47,13 @@
         android:text="@string/botonAceptar"/>
 
     <Button
-        android:id="@+id/botonCancelar"
+        android:id="@+id/botonNoAceptar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginHorizontal="30dp"
         android:visibility="visible"
-        android:text="@string/botonCancelar"/>
+        android:text="@string/botonNoAceptar"/>
 
 
 </LinearLayout>
