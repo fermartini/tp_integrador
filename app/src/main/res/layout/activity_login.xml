@@ -58,15 +58,6 @@
         android:visibility="gone"/>
 
     <Button
-        android:id="@+id/botonIngresar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="50dp"
-        android:visibility="gone"
-        android:text="@string/botonIngreso"/>
-
-    <Button
         android:id="@+id/botonTyC"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,6 +65,34 @@
         android:layout_marginHorizontal="50dp"
         android:visibility="visible"
         android:text="@string/botonTyC"/>
+
+    <CheckBox
+        android:id="@+id/checkedTyC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        android:text="@string/aceptacionTyC"
+        android:textSize="11sp"/>
+
+    <Button
+        android:id="@+id/botonAceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:visibility="invisible"
+        android:text="@string/botonAceptar"/>
+
+    <Button
+        android:id="@+id/botonIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:visibility="invisible"
+        android:text="@string/botonIngreso"/>
 
 
 </LinearLayout>

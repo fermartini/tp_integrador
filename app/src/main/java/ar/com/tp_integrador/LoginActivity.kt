@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -22,18 +23,36 @@ class LoginActivity : AppCompatActivity() {
         val apellido = findViewById<EditText>(R.id.apellido)
         val correoElectronico = findViewById<EditText>(R.id.correoElectronico)
         val progressBar = findViewById<ProgressBar>(R.id.progreso)
-        val botonIngresar = findViewById<Button>(R.id.botonIngresar)
         val botonTyC = findViewById<Button>(R.id.botonTyC)
+        val checked = findViewById<CheckBox>(R.id.checkedTyC)
+        val botonAceptar = findViewById<Button>(R.id.botonAceptar)
+        val botonIngresar = findViewById<Button>(R.id.botonIngresar)
 
         //Botón que abre el pop up donde se encuentran las políticas de términos y condiciones
         botonTyC.setOnClickListener {
                 val dialog = TyCActivity()
                 dialog.show(supportFragmentManager, "tyc")
                 botonTyC.visibility = View.GONE
-                botonIngresar.visibility = View.VISIBLE
+                checked.visibility = View.VISIBLE
+                botonAceptar.visibility = View.VISIBLE
             }
 
-        //Botón ingresar
+        //Botón Aceptar se habilita luego de haber leído los Términos y Condiciones
+        botonAceptar.setOnClickListener {
+            //Si se tildó el check
+            if (checked.isChecked) {
+                //Se habilita el botón Ingresar
+                botonIngresar.visibility = View.VISIBLE
+                //Se le notifica al usuario que debe apretar el botón Ingresar para avanzar
+                Toast.makeText(this, "Apriete el botón Ingresar para continuar", Toast.LENGTH_LONG).show()
+            } else {
+                //Se le notifica al usuario que debe tildar el check para avanzar
+                Toast.makeText(this, "Debe tildar el check para poder continuar", Toast.LENGTH_LONG).show()
+            }
+
+        }
+
+        //Botón Ingresar que se habilita luego de aceptar los Términos y Condiciones
         botonIngresar.setOnClickListener {
             progressBar.visibility = View.VISIBLE
             val nombreUsuario = nombre.text.toString()
@@ -43,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
             val datosPersonales = getSharedPreferences("userData", Context.MODE_PRIVATE)
 
             //Valida que ninguno de los valores solicitados quede vacío
-            if(nombreUsuario.isNotEmpty() && apellidoUsuario.isNotEmpty() && correoUsuario.isNotEmpty()){
+            if (nombreUsuario.isNotEmpty() && apellidoUsuario.isNotEmpty() && correoUsuario.isNotEmpty()) {
                 datosPersonales.edit().apply {
                     putString("nombreUsuario", nombreUsuario)
                     putString("apellidoUsuario", apellidoUsuario)
@@ -54,11 +73,10 @@ class LoginActivity : AppCompatActivity() {
                 //Mensaje de validación si se logueo correctamente
                 Toast.makeText(this, "Logueo Válido", Toast.LENGTH_LONG).show()
                 //Redirijo a la actividad del Test de Inversor
-                val intent = Intent(this, TestActivity::class.java )
+                val intent = Intent(this, TestActivity::class.java)
                 startActivity(intent)
                 finish()
-            }
-            else{
+            } else {
                 //Mensaje que aparece para que el usuario complete la totalidad de los datos
                 Toast.makeText(this, "Debe completar todos los datos solicitados", Toast.LENGTH_LONG).show()
             }
