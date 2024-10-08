@@ -3,6 +3,7 @@ package ar.com.tp_integrador
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -57,5 +58,46 @@ class ResultActivity : AppCompatActivity() {
             finish()
         }
 
+        val btnGuardarInversion = findViewById<Button>(R.id.btnGuardarInversion)
+        btnGuardarInversion.setOnClickListener {
+            guardarComparacion(entidadUno, capitalUno, tnaUno, plazoUno, roiUno, entidadDos,
+                capitalDos, tnaDos, plazoDos, roiDos)
+        }
+    }
+
+    fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, plazoUno: Int, roiUno: Double,
+                           entidadDos: String?, capitalDos: Double, tnaDos: Double, plazoDos: Int, roiDos: Double) {
+        val sharedPreferences = getSharedPreferences("HistorialComparaciones", MODE_PRIVATE)
+        val archivadorDatos = sharedPreferences.edit()
+
+        for (i in 4 downTo 1) {
+            archivadorDatos.putString("entidadInvUno$i", sharedPreferences.getString("entidadInvUno${i - 1}", ""))
+            archivadorDatos.putFloat("capitalInvUno$i", sharedPreferences.getFloat("capitalInvUno${i - 1}", 0f))
+            archivadorDatos.putFloat("tnaInvUno$i", sharedPreferences.getFloat("tnaInvUno${i - 1}", 0f))
+            archivadorDatos.putInt("plazoInvUno$i", sharedPreferences.getInt("plazoInvUno${i - 1}", 0))
+            archivadorDatos.putFloat("roiInvUno$i", sharedPreferences.getFloat("roiInvUno${i - 1}", 0f))
+
+            archivadorDatos.putString("entidadInvDos$i", sharedPreferences.getString("entidadInvDos${i - 1}", ""))
+            archivadorDatos.putFloat("capitalInvDos$i", sharedPreferences.getFloat("capitalInvDos${i - 1}", 0f))
+            archivadorDatos.putFloat("tnaInvDos$i", sharedPreferences.getFloat("tnaInvDos${i - 1}", 0f))
+            archivadorDatos.putInt("plazoInvDos$i", sharedPreferences.getInt("plazoInvDos${i - 1}", 0))
+            archivadorDatos.putFloat("roiInvDos$i", sharedPreferences.getFloat("roiInvDos${i - 1}", 0f))
+        }
+
+        archivadorDatos.putString("entidadInvUno0", entidadUno)
+        archivadorDatos.putFloat("capitalInvUno0", capitalUno.toFloat())
+        archivadorDatos.putFloat("tnaInvUno0", tnaUno.toFloat())
+        archivadorDatos.putInt("plazoInvUno0", plazoUno)
+        archivadorDatos.putFloat("roiInvUno0", roiUno.toFloat())
+
+        archivadorDatos.putString("entidadInvDos0", entidadDos)
+        archivadorDatos.putFloat("capitalInvDos0", capitalDos.toFloat())
+        archivadorDatos.putFloat("tnaInvDos0", tnaDos.toFloat())
+        archivadorDatos.putInt("plazoInvDos0", plazoDos)
+        archivadorDatos.putFloat("roiInvDos0", roiDos.toFloat())
+
+        archivadorDatos.apply()
+
+        Toast.makeText(this, "Comparación guardada exitosamente", Toast.LENGTH_SHORT).show()
     }
 }
