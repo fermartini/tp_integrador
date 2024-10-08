@@ -29,115 +29,533 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="625dp"
+            android:gravity="center"
             android:orientation="vertical"
-            android:padding="24dp"
-            android:gravity="center">
+            android:padding="24dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="536dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="10dp"
                         android:elevation="4dp"
-                        app:cardCornerRadius="12dp">
+                        app:cardCornerRadius="10dp">
 
-                    <TextView
-                        android:id="@+id/comparacion1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="8dp"
-                        android:text="Comparación 1" />
+                        <TextView
+                            android:id="@+id/comparacion1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="8dp"
+                            android:text="Comparación 1" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadUno1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 1" />
+
+                            <TextView
+                                android:id="@+id/capitalUno1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital inversión 1" />
+
+                            <TextView
+                                android:id="@+id/plazoUno1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 1" />
+
+                            <TextView
+                                android:id="@+id/roiUno1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 1" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadDos1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 2" />
+
+                            <TextView
+                                android:id="@+id/capitalDos1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 2" />
+
+                            <TextView
+                                android:id="@+id/plazoDos1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 2" />
+
+                            <TextView
+                                android:id="@+id/roiDos1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 2" />
+                        </com.google.android.material.card.MaterialCardView>
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="10dp"
                         android:elevation="4dp"
-                        app:cardCornerRadius="12dp">
+                        app:cardCornerRadius="10dp">
 
                         <TextView
                             android:id="@+id/comparacion2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Comparación 2"
-                            android:paddingTop="8dp"/>
-                    </com.google.android.material.card.MaterialCardView>
+                            android:paddingTop="8dp"
+                            android:text="Comparación 2" />
 
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadUno2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 1" />
+
+                            <TextView
+                                android:id="@+id/capitalUno2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 1" />
+
+                            <TextView
+                                android:id="@+id/plazoUno2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 1" />
+
+                            <TextView
+                                android:id="@+id/roiUno2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 1" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadDos2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 2" />
+
+                            <TextView
+                                android:id="@+id/capitalDos2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 2" />
+
+                            <TextView
+                                android:id="@+id/plazoDos2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 2" />
+
+                            <TextView
+                                android:id="@+id/roiDos2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 2" />
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="10dp"
                         android:elevation="4dp"
-                        app:cardCornerRadius="12dp">
+                        app:cardCornerRadius="10dp">
 
                         <TextView
                             android:id="@+id/comparacion3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Comparación 3"
-                            android:paddingTop="8dp"/>
+                            android:paddingTop="8dp"
+                            android:text="Comparación 3" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadUno3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 1" />
+
+                            <TextView
+                                android:id="@+id/capitalUno3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 1" />
+
+                            <TextView
+                                android:id="@+id/plazoUno3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 1" />
+
+                            <TextView
+                                android:id="@+id/roiUno3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 1" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadDos3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 2" />
+
+                            <TextView
+                                android:id="@+id/capitalDos3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 2" />
+
+                            <TextView
+                                android:id="@+id/plazoDos3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 2" />
+
+                            <TextView
+                                android:id="@+id/roiDos3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 2" />
+                        </com.google.android.material.card.MaterialCardView>
+
+
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="10dp"
                         android:elevation="4dp"
-                        app:cardCornerRadius="12dp">
+                        app:cardCornerRadius="10dp">
 
                         <TextView
                             android:id="@+id/comparacion4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Comparación 4"
-                            android:paddingTop="8dp"/>
+                            android:paddingTop="8dp"
+                            android:text="Comparación 4" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadUno4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 1" />
+
+                            <TextView
+                                android:id="@+id/capitalUno4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 1" />
+
+                            <TextView
+                                android:id="@+id/plazoUno4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 1" />
+
+                            <TextView
+                                android:id="@+id/roiUno4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 1" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadDos4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 2" />
+
+                            <TextView
+                                android:id="@+id/capitalDos4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 2" />
+
+                            <TextView
+                                android:id="@+id/plazoDos4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 2" />
+
+                            <TextView
+                                android:id="@+id/roiDos4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 2" />
+                        </com.google.android.material.card.MaterialCardView>
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="10dp"
                         android:elevation="4dp"
-                        app:cardCornerRadius="12dp">
+                        app:cardCornerRadius="10dp">
 
                         <TextView
                             android:id="@+id/comparacion5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Comparación 5"
-                            android:paddingTop="8dp"/>
+                            android:paddingTop="8dp"
+                            android:text="Comparación 5" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadUno5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 1" />
+
+                            <TextView
+                                android:id="@+id/capitalUno5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 1" />
+
+                            <TextView
+                                android:id="@+id/plazoUno5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 1" />
+
+                            <TextView
+                                android:id="@+id/roiUno5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 1" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginBottom="0dp"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="6dp">
+
+                            <TextView
+                                android:id="@+id/entidadDos5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15px"
+                                android:paddingLeft="2dp"
+                                android:text="Entidad 2" />
+
+                            <TextView
+                                android:id="@+id/capitalDos5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:paddingLeft="2dp"
+                                android:text="Capital 2" />
+
+                            <TextView
+                                android:id="@+id/plazoDos5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="105px"
+                                android:paddingLeft="2dp"
+                                android:text="Plazo 2" />
+
+                            <TextView
+                                android:id="@+id/roiDos5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="150px"
+                                android:paddingLeft="2dp"
+                                android:text="ROI 2" />
+                        </com.google.android.material.card.MaterialCardView>
+
+
                     </com.google.android.material.card.MaterialCardView>
+
+                    <Button
+                        android:id="@+id/btnAtras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Atrás" />
+
 
                 </LinearLayout>
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnAtras"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Atrás" />
-
         </LinearLayout>
-
-
 
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
-
