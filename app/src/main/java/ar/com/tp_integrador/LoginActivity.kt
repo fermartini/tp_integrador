@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
             val datosPersonales = getSharedPreferences("userData", Context.MODE_PRIVATE)
 
             //Valida que ninguno de los valores solicitados quede vacío
-            if (nombreUsuario.isNotEmpty() && apellidoUsuario.isNotEmpty() && correoUsuario.isNotEmpty()) {
+            if (nombreUsuario.isNotEmpty() && apellidoUsuario.isNotEmpty() && correoUsuario.isNotEmpty() && checked.isChecked) {
                 datosPersonales.edit().apply {
                     putString("nombreUsuario", nombreUsuario)
                     putString("apellidoUsuario", apellidoUsuario)
@@ -78,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             } else {
                 //Mensaje que aparece para que el usuario complete la totalidad de los datos
-                Toast.makeText(this, "Debe completar todos los datos solicitados", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Debe completar todos los datos solicitados y tener el check tildado para poder continuar", Toast.LENGTH_LONG).show()
             }
         }
     }
