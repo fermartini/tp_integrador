@@ -43,7 +43,7 @@ class ResultActivity : AppCompatActivity() {
             finish()
         }
 
-                val btnGuardarInversion = findViewById<Button>(R.id.btnGuardarInversion)
+        val btnGuardarInversion = findViewById<Button>(R.id.btnGuardarInversion)
         btnGuardarInversion.setOnClickListener {
                 guardarComparacion(entidadUno, capitalUno, tnaUno, plazoUno, roiUno, entidadDos,
                     capitalDos, tnaDos, plazoDos, roiDos)
@@ -52,12 +52,12 @@ class ResultActivity : AppCompatActivity() {
 
 
 
-fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, plazoUno: Int, roiUno: Double,
-                   entidadDos: String?, capitalDos: Double, tnaDos: Double, plazoDos: Int, roiDos: Double) {
+    fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, plazoUno: Int, roiUno: Double,
+                           entidadDos: String?, capitalDos: Double, tnaDos: Double, plazoDos: Int, roiDos: Double) {
     val sharedPreferences = getSharedPreferences("HistorialComparaciones", MODE_PRIVATE)
     val archivadorDatos = sharedPreferences.edit()
 
-    for (i in 4 downTo 1) {
+    for (i in 5 downTo 1) {
         archivadorDatos.putString("entidadInvUno$i", sharedPreferences.getString("entidadInvUno${i - 1}", ""))
         archivadorDatos.putFloat("capitalInvUno$i", sharedPreferences.getFloat("capitalInvUno${i - 1}", 0f))
         archivadorDatos.putFloat("tnaInvUno$i", sharedPreferences.getFloat("tnaInvUno${i - 1}", 0f))
@@ -70,7 +70,7 @@ fun guardarComparacion(entidadUno: String?, capitalUno: Double, tnaUno: Double, 
         archivadorDatos.putInt("plazoInvDos$i", sharedPreferences.getInt("plazoInvDos${i - 1}", 0))
         archivadorDatos.putFloat("roiInvDos$i", sharedPreferences.getFloat("roiInvDos${i - 1}", 0f))
     }
-    
+
     archivadorDatos.putString("entidadInvUno0", entidadUno)
     archivadorDatos.putFloat("capitalInvUno0", capitalUno.toFloat())
     archivadorDatos.putFloat("tnaInvUno0", tnaUno.toFloat())
