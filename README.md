@@ -1,3 +1,5 @@
+[!IMPORTANT]
+
 La presente aplicación consiste en un Comparador de Inversiones Financieras. 
 
 Está realizada con la herramienta Android Studios, en lenguaje Kotlin, para la realización de un Trabajo Práctico Integrador, a modo examen, para la materia "Desarrollo de aplicaciones para dispositivos Móviles", para el Instituto Formación Técnica Superior N° 18, en el año 2024.
