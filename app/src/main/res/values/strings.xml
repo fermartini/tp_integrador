@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">tp_integrador</string>
+    <string name="app_name">TP1 IFTS 18 Mobile</string>
     <string name="bienvenida">Hola</string>
     <string name="tipoInversor">Tipo de Inversor:</string>
     <string name="botonSimular">Simular</string>

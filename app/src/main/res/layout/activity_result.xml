@@ -46,12 +46,29 @@
                         android:layout_marginBottom="8dp"/>
 
                     <TextView
+                        android:id="@+id/capital_inversion_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capital_1"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/plazo_inversion_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plazo_1"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+
+                    <TextView
                         android:id="@+id/roi_inversion_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/roi1"
                         android:textSize="16sp"
                         android:gravity="center" />
+
 
                 </LinearLayout>
 
@@ -71,6 +88,22 @@
                         android:textStyle="bold"
                         android:gravity="center"
                         android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:id="@+id/capital_inversion_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capital_1"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/plazo_inversion_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plazo_1"
+                        android:textSize="16sp"
+                        android:gravity="center" />
+
 
                     <TextView
                         android:id="@+id/roi_inversion_2"
@@ -98,7 +131,9 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGuardarInversion"
         android:layout_width="wrap_content"
@@ -106,7 +141,11 @@
         android:text="@string/botonGuardar"
         app:cornerRadius="16dp"
         android:layout_marginTop="20dp"
-        android:paddingHorizontal="32dp"/>
+        android:paddingHorizontal="20dp"
+        android:backgroundTint="@color/brandGreen"
+        android:textColor="@color/secondaryText"
+        android:layout_marginRight="6dp"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnVolverAtras"
@@ -115,6 +154,12 @@
         android:text="@string/botonVolver"
         app:cornerRadius="16dp"
         android:layout_marginTop="20dp"
-        android:paddingHorizontal="32dp"/>
+        android:paddingHorizontal="36dp"
+        android:backgroundTint="@color/brandGreen"
+        android:textColor="@color/secondaryText"
+        android:layout_marginLeft="6dp"
+        />
+
+</LinearLayout>
 
 </LinearLayout>

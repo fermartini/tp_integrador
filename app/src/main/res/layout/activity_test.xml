@@ -6,22 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:padding="24dp"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    >
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tituloTest"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
         android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="@string/pregunta1Test"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        />
     <RadioGroup
         android:id="@+id/answer1"
         android:layout_width="wrap_content"
@@ -59,7 +67,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pregunta2Test"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        />
     <RadioGroup
         android:id="@+id/answer2"
         android:layout_width="wrap_content"
@@ -97,7 +107,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pregunta3Test"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        />
     <RadioGroup
         android:id="@+id/answer3"
         android:layout_width="wrap_content"
@@ -135,6 +147,12 @@
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/botonEnviar"/>
+        android:text="@string/botonEnviar"
+        android:backgroundTint="@color/brandGreen"
+        android:textColor="@color/secondaryText"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        />
 
 </LinearLayout>

@@ -1,10 +1,675 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistoryActivity">
+    tools:context=".HistoryActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="14dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Histórico de comparaciones"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Comparación 1 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="12dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/comparacion1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadUno1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 1"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/capitalUno1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Capital 1" />
+
+                                <TextView
+                                    android:id="@+id/plazoUno1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Plazo 1" />
+
+                                <TextView
+                                    android:id="@+id/roiUno1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:text="ROI 1" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadDos1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 2"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalDos1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/plazoDos1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/roiDos1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 2"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Comparación 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="12dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/comparacion2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadUno2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 1"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/capitalUno2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/plazoUno2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/roiUno2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 1"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadDos2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 2"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalDos2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/plazoDos2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/roiDos2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 2"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Comparación 3 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="12dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/comparacion3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadUno3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 1"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalUno3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/plazoUno3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/roiUno3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 1"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadDos3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 2"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalDos3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/plazoDos3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/roiDos3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 2"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Comparación 4 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="12dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/comparacion4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadUno4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 1"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalUno4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/plazoUno4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/roiUno4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 1"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadDos4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 2"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalDos4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/plazoDos4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/roiDos4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 2"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Comparación 5 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="12dp"
+                    android:elevation="6dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/comparacion5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="12dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadUno5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 1"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalUno5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/plazoUno5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 1"
+                                    android:layout_marginTop="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/roiUno5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 1"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:elevation="4dp"
+                            app:cardCornerRadius="0dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="12dp"
+                                android:gravity="center"
+                                >
+
+                                <TextView
+                                    android:id="@+id/entidadDos5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Entidad 2"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/capitalDos5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Capital 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/plazoDos5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plazo 2"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/roiDos5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROI 2"
+                                    android:layout_marginTop="8dp"/>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Atrás"
+            android:backgroundTint="@color/brandGreen"
+            android:textColor="@color/secondaryText"
+            android:layout_marginTop="14dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

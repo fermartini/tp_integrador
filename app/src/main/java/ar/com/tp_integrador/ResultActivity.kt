@@ -18,17 +18,6 @@ class ResultActivity : AppCompatActivity() {
         val comparacion = intent.getStringExtra("comparacion")
 
 
-        val resultadoTextView = findViewById<TextView>(R.id.resultado)
-        resultadoTextView.text = """
-            $comparacion
-        """.trimIndent()
-
-        val roiUnoTextView = findViewById<TextView>(R.id.roi_inversion_1)
-        roiUnoTextView.text = "ROI: $roiUno"
-
-        val roiDosTextView = findViewById<TextView>(R.id.roi_inversion_2)
-        roiDosTextView.text = "ROI: $roiDos"
-
         val entidadUno = intent.getStringExtra("entidadUno")
         val capitalUno = intent.getDoubleExtra("capitalUno", 0.0)
         val tnaUno = intent.getDoubleExtra("tnaUno", 0.0)
@@ -39,26 +28,34 @@ class ResultActivity : AppCompatActivity() {
         val tnaDos = intent.getDoubleExtra("tnaDos", 0.0)
         val plazoDos = intent.getIntExtra("plazoDos", 0)
 
+
+        val resultadoTextView = findViewById<TextView>(R.id.resultado)
+        resultadoTextView.text = """
+            $comparacion
+        """.trimIndent()
+
+        val roiUnoTextView = findViewById<TextView>(R.id.roi_inversion_1)
+        roiUnoTextView.text = "ROI: $roiUno"
+
+        val capitalUnoTextView = findViewById<TextView>(R.id.capital_inversion_1)
+        capitalUnoTextView.text = "Capital: $capitalUno"
+
+        val plazoUnoTextView = findViewById<TextView>(R.id.plazo_inversion_1)
+        plazoUnoTextView.text = "Plazo: $plazoUno"
+
+        val roiDosTextView = findViewById<TextView>(R.id.roi_inversion_2)
+        roiDosTextView.text = "ROI: $roiDos"
+
+        val capitalDosTextView = findViewById<TextView>(R.id.capital_inversion_2)
+        capitalDosTextView.text = "Capital: $capitalDos"
+
+        val plazoDosTextView = findViewById<TextView>(R.id.plazo_inversion_2)
+        plazoDosTextView.text = "Plazo: $plazoDos"
+
         val btnVolverAtras = findViewById<Button>(R.id.btnVolverAtras)
         btnVolverAtras.setOnClickListener {
             finish()
         }
 
-        val btnGuardarInversion = findViewById<Button>(R.id.btnGuardarInversion)
-        btnGuardarInversion.setOnClickListener {
-            /*
-            guardarInversion(
-                this,
-                entidadUno ?: "EntidadUno",
-                capitalUno,
-                tnaUno,
-                plazoUno,
-                entidadDos ?: "EntidadDos",
-                capitalDos,
-                tnaDos,
-                plazoDos
-            )
-            */
-        }
     }
 }

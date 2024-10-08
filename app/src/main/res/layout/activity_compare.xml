@@ -6,14 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="18dp"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="@string/comparador"
+        android:textStyle="bold"
+        android:text="Comparador de Inversiones"
         android:textSize="24sp" />
 
 
@@ -33,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/capital1">
+                android:hint="Capital Inversión 1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalUno"
@@ -47,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/plazoInversion1">
+                android:hint="Plazo Inversión 1 (en días)">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoUno"
@@ -61,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/tna1">
+                android:hint="TNA Inversión 1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaUno"
@@ -75,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/entidad1">
+                android:hint="Entidad Inversión 1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadUno"
@@ -94,7 +98,9 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/capital2">
+                android:hint="Capital Inversión 2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalDos"
@@ -122,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/plazoInversion2">
+                android:hint="Plazo Inversión 2 (en días)">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoDos"
@@ -136,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/tna2">
+                android:hint="TNA Inversión 2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaDos"
@@ -150,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="@string/entidad2">
+                android:hint="Entidad Inversión 2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadDos"
@@ -161,85 +167,43 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/botonRdo"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
-        android:text="@string/botonComparar" />
-
-
-    <!--
-        <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="....." />
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Ingresa tu nombre"
-        android:inputType="textPersonName"
-        />
-
-    <EditText
-        android:id="@+id/apellido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Ingresa tu apellido"
-        android:inputType="textPersonName"
-        android:layout_marginTop="16dp" />
-
-    <EditText
-        android:id="@+id/correoElectronico"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:hint="Ingresa tu email"
-        android:inputType="text"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:id="@+id/botonIngresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Ingresar" />
-
-    <CheckBox
-        android:id="@+id/cbTyC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Aceptar términos y condiciones" />
+        >
 
-    <Button
-        android:id="@+id/botonTyC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Términos y Condiciones" />
 
-    <Button
-        android:id="@+id/botonHistorial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Historial" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonRdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:text="Comparar"
+            android:layout_marginRight="6dp"
+            app:cornerRadius="16dp"
+            android:paddingHorizontal="36dp"
+            android:backgroundTint="@color/brandGreen"
+            android:textColor="@color/secondaryText"
+            />
 
-                   -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVolverAtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:text="Atrás"
+            android:layout_marginLeft="6dp"
+            app:cornerRadius="16dp"
+            android:paddingHorizontal="36dp"
+            android:backgroundTint="@color/brandGreen"
+            android:textColor="@color/secondaryText"
+            />
+
+    </LinearLayout>
+
 
 </LinearLayout>
