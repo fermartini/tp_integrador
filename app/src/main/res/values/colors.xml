@@ -6,4 +6,5 @@
     <color name="secondaryText">#212121</color>
     <color name="brandGreen">#22D081</color>
     <color name="brandRed">#C74242</color>
+    <color name="colorSelected">#22D081</color>
 </resources>

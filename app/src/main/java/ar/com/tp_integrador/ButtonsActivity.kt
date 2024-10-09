@@ -1,5 +1,6 @@
 package ar.com.tp_integrador
 
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -15,8 +16,6 @@ class ButtonsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_buttons)
-
-
 
         val inversorSharedPreference = getSharedPreferences("userData", Context.MODE_PRIVATE)
         val name = inversorSharedPreference.getString("nombreUsuario", "Usuario")
@@ -54,10 +53,26 @@ class ButtonsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         findViewById<Button>(R.id.logoutButton).setOnClickListener {
-            logoutUser()
+            showLogoutConfirmationDialog()
         }
+    }
+
+    private fun showLogoutConfirmationDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Confirmar desconexión")
+        builder.setMessage("¿Estás seguro que quieres cerrar sesión? Perderás todo tu historial")
+
+        builder.setPositiveButton("Sí") { dialog, _ ->
+            logoutUser()
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton("No") { dialog, _ ->
+            dialog.dismiss()  //
+        }
+
+        builder.create().show()
     }
 
     private fun logoutUser() {
@@ -65,6 +80,11 @@ class ButtonsActivity : AppCompatActivity() {
         val editor = preferences.edit()
         editor.clear()
         editor.apply()
+
+        val historialPreferences = getSharedPreferences("HistorialComparaciones", MODE_PRIVATE)
+        val historialEditor = historialPreferences.edit()
+        historialEditor.clear()
+        historialEditor.apply()
 
         Toast.makeText(this, "Desconectado", Toast.LENGTH_SHORT).show()
 

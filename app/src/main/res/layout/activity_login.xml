@@ -24,7 +24,10 @@
         android:hint="@string/nombre"
         android:inputType="textPersonName"
         android:minWidth="48dp"
-        android:minHeight="48dp"/>
+        android:minHeight="48dp"
+        android:importantForAutofill="no"
+        android:autofillHints=""
+        />
 
     <EditText
         android:id="@+id/apellido"
@@ -36,8 +39,12 @@
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:hint="@string/apellido"
-
-        android:inputType="textPersonName" />
+        android:importantForAutofill="no"
+        android:autofillHints=""
+        android:inputType="textPersonName"
+        android:imeOptions="actionDone"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
     <EditText
         android:id="@+id/correoElectronico"
@@ -49,7 +56,10 @@
         android:hint="@string/correoElectronico"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no"
+        android:autofillHints=""
+        />
 
     <ProgressBar
         android:id="@+id/progreso"

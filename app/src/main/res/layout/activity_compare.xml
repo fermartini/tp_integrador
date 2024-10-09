@@ -37,13 +37,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Capital Inversión 1">
+                android:hint="Capital Inversión 1"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -51,13 +55,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Plazo Inversión 1 (en días)">
+                android:hint="Plazo Inversión 1 (en días)"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -65,13 +73,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="TNA Inversión 1">
+                android:hint="TNA Inversión 1"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -79,13 +91,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Entidad Inversión 1">
+                android:hint="Entidad Inversión 1"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadUno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -114,13 +130,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Capital Inversión 2">
+                android:hint="Capital Inversión 2"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/capitalDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -128,13 +148,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Plazo Inversión 2 (en días)">
+                android:hint="Plazo Inversión 2 (en días)"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/plazoDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -142,13 +166,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="TNA Inversión 2">
+                android:hint="TNA Inversión 2"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tnaDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -156,13 +184,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:hint="Entidad Inversión 2">
+                android:hint="Entidad Inversión 2"
+                app:boxStrokeColor="@color/colorSelected"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/entidadDos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColor="@color/colorSelected"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

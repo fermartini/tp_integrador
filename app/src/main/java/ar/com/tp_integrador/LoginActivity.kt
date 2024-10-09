@@ -44,10 +44,10 @@ class LoginActivity : AppCompatActivity() {
                 //Se habilita el botón Ingresar
                 botonIngresar.visibility = View.VISIBLE
                 //Se le notifica al usuario que debe apretar el botón Ingresar para avanzar
-                Toast.makeText(this, "Apriete el botón Ingresar para continuar", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Apriete el botón Ingresar para continuar", Toast.LENGTH_SHORT).show()
             } else {
                 //Se le notifica al usuario que debe tildar el check para avanzar
-                Toast.makeText(this, "Debe tildar el check para poder continuar", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Debe tildar el check para poder continuar", Toast.LENGTH_SHORT).show()
             }
 
         }
@@ -71,14 +71,14 @@ class LoginActivity : AppCompatActivity() {
                 }
                 progressBar.visibility = View.GONE
                 //Mensaje de validación si se logueo correctamente
-                Toast.makeText(this, "Logueo Válido", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Logueo Válido", Toast.LENGTH_SHORT).show()
                 //Redirijo a la actividad del Test de Inversor
                 val intent = Intent(this, TestActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
                 //Mensaje que aparece para que el usuario complete la totalidad de los datos
-                Toast.makeText(this, "Debe completar todos los datos solicitados y tener el check tildado para poder continuar", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Debe completar todos los datos solicitados y tener el check tildado para poder continuar", Toast.LENGTH_SHORT).show()
             }
         }
     }
