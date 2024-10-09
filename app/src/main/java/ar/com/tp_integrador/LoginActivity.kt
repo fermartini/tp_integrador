@@ -22,7 +22,6 @@ class LoginActivity : AppCompatActivity() {
         val nombre = findViewById<EditText>(R.id.nombre)
         val apellido = findViewById<EditText>(R.id.apellido)
         val correoElectronico = findViewById<EditText>(R.id.correoElectronico)
-        val progressBar = findViewById<ProgressBar>(R.id.progreso)
         val botonTyC = findViewById<Button>(R.id.botonTyC)
         val checked = findViewById<CheckBox>(R.id.checkedTyC)
         val botonAceptar = findViewById<Button>(R.id.botonAceptar)
@@ -54,7 +53,6 @@ class LoginActivity : AppCompatActivity() {
 
         //Botón Ingresar que se habilita luego de aceptar los Términos y Condiciones
         botonIngresar.setOnClickListener {
-            progressBar.visibility = View.VISIBLE
             val nombreUsuario = nombre.text.toString()
             val apellidoUsuario = apellido.text.toString()
             val correoUsuario = correoElectronico.text.toString()
@@ -69,7 +67,6 @@ class LoginActivity : AppCompatActivity() {
                     putString("correoUsuario", correoUsuario)
                     apply()
                 }
-                progressBar.visibility = View.GONE
                 //Mensaje de validación si se logueo correctamente
                 Toast.makeText(this, "Logueo Válido", Toast.LENGTH_LONG).show()
                 //Redirijo a la actividad del Test de Inversor

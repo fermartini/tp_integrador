@@ -51,12 +51,6 @@
         android:minHeight="48dp"
         android:inputType="textEmailAddress" />
 
-    <ProgressBar
-        android:id="@+id/progreso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"/>
-
     <Button
         android:id="@+id/botonTyC"
         android:layout_width="match_parent"
